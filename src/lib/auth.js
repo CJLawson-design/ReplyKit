@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
 import firebase from "./firebase";
-import auth from "./firebase";
 
 const authContext = createContext();
 
@@ -9,6 +8,7 @@ export function ProvideAuth({ children }) {
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 
+// Custom auth hook
 export const useAuth = () => {
   return useContext(authContext);
 };
@@ -16,8 +16,11 @@ export const useAuth = () => {
 function useProvideAuth() {
   const [user, setUser] = useState(null);
 
+  // testing
+  console.log(user);
+
   const signinWithGithub = () => {
-    const provider = new GithubAuthProvider();
+    const provider = new firebase.auth.GithubAuthProvider();
 
     return firebase
       .auth()
