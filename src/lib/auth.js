@@ -1,10 +1,12 @@
 import { useState, useEffect, useContext, createContext } from "react";
 import firebase from "./firebase";
 
+// Crreate context
 const authContext = createContext();
 
-export function ProvideAuth({ children }) {
-  const auth = useProvideAuth();
+// Wrap context provider around component tree
+export function AuthProvider({ children }) {
+  const auth = useAuthProvider();
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 
@@ -13,12 +15,13 @@ export const useAuth = () => {
   return useContext(authContext);
 };
 
-function useProvideAuth() {
+function useAuthProvider() {
   const [user, setUser] = useState(null);
 
   // testing
   console.log(user);
 
+  // Sign in with Github
   const signinWithGithub = () => {
     const provider = new firebase.auth.GithubAuthProvider();
 
@@ -30,7 +33,7 @@ function useProvideAuth() {
         return response.user;
       });
   };
-
+  // Signout
   const signout = () => {
     return firebase
       .auth()
