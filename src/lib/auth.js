@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext, createContext } from "react";
-import firebase from "./firebase";
 import Router from "next/router";
+
+import firebase from "./firebase";
+import { createUser } from "./db";
 
 // Crreate context
 const authContext = createContext();
@@ -20,15 +22,15 @@ function useAuthProvider() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // testing
-  console.log(user);
-
   // handle raw user json data
-  const handleUser = (rawUser) => {
+  const handleUser = async (rawUser) => {
     if (rawUser) {
-      const user = formatUser(rawUser);
-      setLoading(false);
+      const user = await formatUser(rawUser);
+
+      createUser(user.uid, user);
       setUser(user);
+
+      setLoading(false);
       return user;
     } else {
       setLoading(false);

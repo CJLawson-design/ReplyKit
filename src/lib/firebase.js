@@ -1,10 +1,15 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/functions";
+import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  apiKey: "AIzaSyD3KSSzEho0G1VSzTnkGyk6Q55aO0AAvlE",
+  authDomain: "fast-feedback-demo-2a590.firebaseapp.com",
+  projectId: "fast-feedback-demo-2a590",
+  storageBucket: "fast-feedback-demo-2a590.appspot.com",
+  messagingSenderId: "619010013258",
+  appId: "1:619010013258:web:763c5d049a1739fcfe8eb3",
 };
 
 if (!firebase.apps.length) {
