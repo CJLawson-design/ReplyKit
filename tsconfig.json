@@ -14,7 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+     "paths": {"@/design-system/*": ["components"]}
   },
   "include": [
     "next-env.d.ts",

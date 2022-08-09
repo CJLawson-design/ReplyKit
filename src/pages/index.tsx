@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import Header from "../components/Header";
 import { useAuth } from "../lib/auth";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const auth = useAuth();
@@ -14,23 +16,39 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto flex flex-col items-center justify-center h-screen p-4">
-        <button
-          onClick={(e) => auth.signinWithGithub()}
-          className="active:scale-95 md:mr-5 px-4 py-1 text-sm sm:text-lg rounded-[3px] bg-gray-900 text-white"
-        >
-          Sign In
-        </button>
-        <div>{auth?.user?.email}</div>
-
-        {auth?.user && (
-          <button
-            onClick={(e) => auth.signout()}
-            className="active:scale-95 md:mr-5 px-4 py-1 text-sm sm:text-lg rounded-[3px] bg-gray-900 text-white"
-          >
-            Sign Out
-          </button>
-        )}
+      <Header />
+      <main>
+        <section className="hero relative z-20 pt-12 sm:pt-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center lg:flex-row lg:justify-between">
+              {/* hero- header container*/}
+              <div className="container-1 mb-28">
+                <div className="header-container">
+                  <h1 className="text-6xl font-semi-bold leading-snug mb-6 ">
+                    Commenting Platform for{" "}
+                    <span className="text-[#136FDE]"> Webflow </span>Sites
+                  </h1>
+                  <h3 className="text-lg leading-loose mb-6 ">
+                    ReplyKit is a simple web flow plugin for enabling commenting
+                    threads on your webflow site.
+                  </h3>
+                </div>
+                <div className="button-container ">
+                  <button className="bg-[#162D59] text-gray-100 rounded-md px-7 py-4">
+                    Get started for free
+                  </button>
+                  <button className="px-7 py-4">See how it works</button>
+                </div>
+              </div>
+              {/* hero - image container */}
+              <div className="container-2">
+                <div className="img-container">
+                  <Image src="/images/hero.png" height={500} width={700} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
