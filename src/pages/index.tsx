@@ -19,10 +19,10 @@ const Home: NextPage = () => {
       <Header />
 
       <section className="hero-section relative z-20 pt-12 sm:pt-28">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container md:max-w-xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center sm:items-start lg:flex-row lg:justify-between">
             {/* hero - header container*/}
-            <div className="mb-28 md:max-w-xl md:mx-auto lg:basis-1/2">
+            <div className="mb-28 lg:container lg:basis-1/2">
               <div className="header-container">
                 <span className="text-xs uppercase rounded-full bg-[#1f93ff] bg-opacity-10 text-[#136FDE] px-4 py-1">
                   Early Access
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             {/* hero - image container */}
             <div className="flex flex-row justify-end">
               <div>
-                <Image src="/images/chat.png" height={900} width={800} />
+                <Image src="/images/chat.png" height={800} width={700} />
               </div>
             </div>
           </div>

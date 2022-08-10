@@ -3,7 +3,7 @@ const Header = () => {
     <>
       <header className="relative overflow-hidden">
         <nav className="relative z-20 pt-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:max-w-xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="h-16 flex justify-between">
               {/* Logo */}
               <div>
