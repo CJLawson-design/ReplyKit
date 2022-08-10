@@ -1,3 +1,4 @@
-# Create T3 App
+Idea and code is based on the Fast Feedback project from Lee robinson's 2025 React course (https://react2025.com)
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+This project is rebuilding Fast Feedback with a combination of the T3-Stack [init.tips](https://init.tips) and firebase and is being repurposed as a low-code comment plugin for Webflow sites.
+
