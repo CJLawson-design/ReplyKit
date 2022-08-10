@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "fast-feedback-demo-2a590",
   storageBucket: "fast-feedback-demo-2a590.appspot.com",
   messagingSenderId: "619010013258",
-  appId: "1:619010013258:web:763c5d049a1739fcfe8eb3",
+  appId: "1:619010013258:web:5eeaeaa7041db400fe8eb3",
 };
 
 if (!firebase.apps.length) {

@@ -90,6 +90,7 @@ function useAuthProvider() {
     user,
     loading,
     signinWithGithub,
+    signinWithGoogle,
     signout,
   };
 }

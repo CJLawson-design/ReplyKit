@@ -20,9 +20,9 @@ const Home: NextPage = () => {
 
       <section className="hero-section relative z-20 pt-12 sm:pt-28">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center lg:flex-row lg:justify-between">
+          <div className="flex flex-col items-center sm:items-start lg:flex-row lg:justify-between">
             {/* hero - header container*/}
-            <div className="mb-28 sm:basis-1/2">
+            <div className="mb-28 md:max-w-xl md:mx-auto lg:basis-1/2">
               <div className="header-container">
                 <span className="text-xs uppercase rounded-full bg-[#1f93ff] bg-opacity-10 text-[#136FDE] px-4 py-1">
                   Early Access
@@ -38,8 +38,11 @@ const Home: NextPage = () => {
                 </h3>
               </div>
               <div className="button-container ">
-                <button className="bg-[#136FDE] shadow text-gray-100 rounded-md px-7 py-4 mr-8">
-                  Request early access
+                <button
+                  className="bg-[#136FDE] shadow text-gray-100 rounded-md px-7 py-4 mr-8"
+                  onClick={(e) => auth.signinWithGoogle()}
+                >
+                  Get started for free
                 </button>
                 <button className="border border-[#136FDE] shadow text-[#136FDE] bg-[#fff] rounded-md px-7 py-4">
                   Request a demo
