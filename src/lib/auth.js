@@ -60,6 +60,9 @@ function useAuthProvider() {
   const signinWithGoogle = (redirect) => {
     setLoading(true);
     const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({
+      login_hint: "user@example.com",
+    });
 
     return firebase
       .auth()
