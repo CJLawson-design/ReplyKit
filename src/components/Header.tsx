@@ -12,10 +12,10 @@ const Header = () => {
                     <text
                       transform="translate(27 22)"
                       fill="#162d59"
-                      font-size="22"
-                      font-family="Circular-Medium, Circular"
-                      font-weight="500"
-                      letter-spacing="-.028em"
+                      fontSize="22"
+                      fontFamily="Circular-Medium, Circular"
+                      fontWeight="500"
+                      letterSpacing="-.028em"
                     >
                       <tspan x="0" y="0">
                         ReplyKit
