@@ -31,8 +31,8 @@ const Header = () => {
               </div>
               {/* Sign In Button */}
               <div>
-                <button className=" flex items-center bg-[#162D59] text-white text-sm px-4 py-2 rounded">
-                  Sign In
+                <button className=" flex items-center bg-[#136FDE] text-white text-sm px-4 py-2 rounded">
+                  Request demo
                 </button>
               </div>
             </div>

@@ -17,39 +17,44 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main>
-        <section className="hero relative z-20 pt-12 sm:pt-28">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-center lg:flex-row lg:justify-between">
-              {/* hero- header container*/}
-              <div className="container-1 mb-28">
-                <div className="header-container">
-                  <h1 className="text-6xl font-semi-bold leading-snug mb-6 ">
-                    Commenting Platform for{" "}
-                    <span className="text-[#136FDE]"> Webflow </span>Sites
-                  </h1>
-                  <h3 className="text-lg leading-loose mb-6 ">
-                    ReplyKit is a simple web flow plugin for enabling commenting
-                    threads on your webflow site.
-                  </h3>
-                </div>
-                <div className="button-container ">
-                  <button className="bg-[#162D59] text-gray-100 rounded-md px-7 py-4">
-                    Get started for free
-                  </button>
-                  <button className="px-7 py-4">See how it works</button>
-                </div>
+
+      <section className="hero-section relative z-20 pt-12 sm:pt-28">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center lg:flex-row lg:justify-between">
+            {/* hero - header container*/}
+            <div className="mb-28 sm:basis-1/2">
+              <div className="header-container">
+                <span className="text-xs uppercase rounded-full bg-[#1f93ff] bg-opacity-10 text-[#136FDE] px-4 py-1">
+                  Early Access
+                </span>
+                <h1 className="text-4xl sm:text-5xl sm:leading-relaxed font-semi-bold leading-snug mb-6 mt-6">
+                  Simple Comment plug-in for your{" "}
+                  <span className="text-[#136FDE]"> Webflow </span>sites
+                </h1>
+                <h3 className="text-xl leading-loose mb-6 text-[#869ab8]">
+                  ReplyKit is a simple webflow plugin for enabling commenting
+                  threads on your webflow site. Reserve your spot for the alpha
+                  now.
+                </h3>
               </div>
-              {/* hero - image container */}
-              <div className="container-2">
-                <div className="img-container">
-                  <Image src="/images/hero.png" height={500} width={700} />
-                </div>
+              <div className="button-container ">
+                <button className="bg-[#136FDE] shadow text-gray-100 rounded-md px-7 py-4 mr-8">
+                  Request early access
+                </button>
+                <button className="border border-[#136FDE] shadow text-[#136FDE] bg-[#fff] rounded-md px-7 py-4">
+                  Request a demo
+                </button>
+              </div>
+            </div>
+            {/* hero - image container */}
+            <div className="flex flex-row justify-end">
+              <div>
+                <Image src="/images/chat.png" height={900} width={800} />
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </>
   );
 };
