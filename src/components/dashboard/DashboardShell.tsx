@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 type Props = { children: ReactNode };
 
-const DashboardShell: FC<Props> = ({ children }) => {
+const DashboardShell: FC<Props> = ({}) => {
   return (
     <>
       <Navbar children={undefined} />

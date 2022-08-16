@@ -4,7 +4,7 @@ import Link from "next/link";
 
 type Props = { children: ReactNode };
 
-const Navbar: FC<Props> = ({ children }) => {
+const Navbar: FC<Props> = ({}) => {
   const { user } = useAuth();
 
   return (
