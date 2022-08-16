@@ -7,8 +7,7 @@ import DashboardShell from "../components/dashboard/DashboardShell";
 const Dashboard: NextPage = () => {
   return (
     <>
-      <Header />
-      <DashboardShell />
+      <DashboardShell children={undefined} />
     </>
   );
 };

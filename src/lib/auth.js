@@ -39,30 +39,10 @@ function useAuthProvider() {
     }
   };
 
-  // Sign in with Github
-  const signinWithGithub = (redirect) => {
-    setLoading(true);
-    const provider = new firebase.auth.GithubAuthProvider();
-
-    return firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((response) => {
-        handleUser(response.user);
-
-        if (redirect) {
-          Router.push(redirect);
-        }
-      });
-  };
-
   // Sign in with Google
   const signinWithGoogle = (redirect) => {
     setLoading(true);
     const provider = new firebase.auth.GoogleAuthProvider();
-    provider.setCustomParameters({
-      login_hint: "user@example.com",
-    });
 
     return firebase
       .auth()
@@ -92,7 +72,6 @@ function useAuthProvider() {
   return {
     user,
     loading,
-    signinWithGithub,
     signinWithGoogle,
     signout,
   };

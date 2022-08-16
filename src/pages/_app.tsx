@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { useState, useEffect } from "react";
 import type { AppType } from "next/dist/shared/lib/utils";
 import { AuthProvider } from "../lib/auth";
 

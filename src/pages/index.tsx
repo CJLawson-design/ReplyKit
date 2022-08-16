@@ -37,14 +37,14 @@ const Home: NextPage = () => {
                   now.
                 </h3>
               </div>
-              <div className="button-container ">
+              <div className="button-container">
                 <button
-                  className="bg-[#136FDE] shadow text-gray-100 rounded-md px-7 py-4 mr-8"
+                  className="bg-[#136FDE] shadow text-gray-100 rounded-md mt-8 px-7 py-4 mr-8 w-full md:w-auto"
                   onClick={(e) => auth.signinWithGoogle()}
                 >
                   Get started for free
                 </button>
-                <button className="border border-[#136FDE] shadow text-[#136FDE] bg-[#fff] rounded-md px-7 py-4">
+                <button className="border border-[#136FDE] shadow text-[#136FDE] bg-[#fff] rounded-md mt-8 px-7 py-4 w-full md:w-auto">
                   Request a demo
                 </button>
               </div>
